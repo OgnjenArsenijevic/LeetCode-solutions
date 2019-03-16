@@ -13,7 +13,7 @@ public class Solution
         {
            split[i]=split[i].trim();
            if(ss.length()>0 && split[i].length()>0) ss+=" ";
-             ss+=split[i];
+           ss+=split[i];
         }
         return ss;
     }
