@@ -1,4 +1,4 @@
-///1013. Pairs of Songs With Total Durations Divisible by 60
+///1010. Pairs of Songs With Total Durations Divisible by 60
 ///Author: Ognjen Arsenijevic
 ///username: ognjen1998
 class Solution 
