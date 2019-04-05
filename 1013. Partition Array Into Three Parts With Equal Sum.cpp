@@ -1,4 +1,4 @@
-///1020. Partition Array Into Three Parts With Equal Sum
+///1013. Partition Array Into Three Parts With Equal Sum
 ///Author: Ognjen Arsenijevic
 ///username: ognjen1998
 class Solution 
