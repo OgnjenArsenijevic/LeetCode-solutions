@@ -1,4 +1,4 @@
-///1023. Binary String With Substrings Representing 1 To N
+///1016. Binary String With Substrings Representing 1 To N
 ///Author: Ognjen Arsenijevic
 ///username: ognjen1998
 class Solution 
