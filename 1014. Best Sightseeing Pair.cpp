@@ -1,4 +1,4 @@
-///1021. Best Sightseeing Pair
+///1014. Best Sightseeing Pair
 ///Author: Ognjen Arsenijevic
 ///username: ognjen1998
 class Solution 
