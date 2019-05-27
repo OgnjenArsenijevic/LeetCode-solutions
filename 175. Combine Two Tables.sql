@@ -1,0 +1,7 @@
+/*
+175. Combine Two Tables
+Author: Ognjen Arsenijevic
+username: ognjen 1998
+*/
+SELECT FIRSTNAME,LASTNAME,CITY,STATE
+FROM PERSON PP LEFT JOIN ADDRESS AA ON(PP.PERSONID=AA.PERSONID)
