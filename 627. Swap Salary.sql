@@ -8,3 +8,4 @@ SET SEX = CASE SEX
 WHEN 'm' THEN 'f'
 WHEN 'f' THEN 'm'
 END
+e
