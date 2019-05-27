@@ -1,0 +1,8 @@
+/*
+176. Second Highest Salary
+Author: Ognjen Arsenijevic
+username: ognjen 1998
+*/
+SELECT MAX(SALARY) AS "SECONDHIGHESTSALARY"
+FROM EMPLOYEE
+WHERE SALARY != (SELECT MAX(SALARY) FROM EMPLOYEE)
