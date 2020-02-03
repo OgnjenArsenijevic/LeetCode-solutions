@@ -1,0 +1,25 @@
+///853. Car Fleet
+///Author: Ognjen Arsenijevic
+///username: ognjen1998
+class Solution 
+{
+public:
+    int carFleet(int target, vector<int>& position, vector<int>& speed) 
+    {
+        if(position.size()==0) return 0;
+        pair<int,double> cars[position.size()];
+        for(int i=0;i<position.size();i++)
+            cars[i]=make_pair(position[i],(target-position[i])*1.0/speed[i]);
+        sort(cars,cars+position.size());
+        int ans=1, idx=position.size()-1, curr=cars[idx].second;
+        while(idx>0)
+        {
+            if(cars[idx].second<cars[idx-1].second)
+                ans++;
+            else
+                cars[idx-1]=cars[idx];
+            idx--;
+        }
+        return ans;
+    }
+};
