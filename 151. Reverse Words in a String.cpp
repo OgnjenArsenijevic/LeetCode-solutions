@@ -1,20 +1,41 @@
 ///151. Reverse Words in a String
 ///Author: Ognjen Arsenijevic
 ///username: ognjen1998
-public class Solution
+class Solution 
 {
-    public String reverseWords(String s) 
+public:
+    string reverseWords3(string& s) 
     {
-        s=s.trim();
-        if(s.length()==0) return s;
-        String ss="";
-        String[] split=s.split(" ");
-        for(int i=split.length-1;i>=0;i--)
+        for(int i=0;i<s.size();i++)
         {
-           split[i]=split[i].trim();
-           if(ss.length()>0 && split[i].length()>0) ss+=" ";
-           ss+=split[i];
+            if(s[i]!=' ' && (i==0 || s[i-1]==' '))
+            {
+                int l=i,r=i;
+                while(r<s.size() && s[r]!=' ')
+                    r++;
+                r--;
+                i=r;
+                while(l<r)
+                    swap(s[l++],s[r--]);
+            }
         }
-        return ss;
+        return s;
     }
-}
+    string reverseWords(string s) 
+    {
+        for(int i=0;i<s.size()/2;i++)
+            swap(s[i],s[s.size()-1-i]);
+        reverseWords3(s);
+        int idx=0,curr=0;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]!=' ' || (s[i]==' ' && idx>0 && s[idx-1]!=' '))
+                s[idx++]=s[i];
+        }
+        if(s[idx-1]==' ')
+            s[idx-1]='\0';
+        else
+            s[idx]='\0';
+        return s;
+    }
+};
