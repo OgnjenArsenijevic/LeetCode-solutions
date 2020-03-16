@@ -1,0 +1,9 @@
+/*
+1148. Article Views I
+Author: Ognjen Arsenijevic
+username: ognjen1998
+*/
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY id ASC
