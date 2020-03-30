@@ -1,0 +1,6 @@
+#1303. Find the Team Size
+#Author: Ognjen Arsenijevic
+#username: ognjen1998
+select e.employee_id,
+(select count(e1.team_id) from Employee e1 where e.team_id = e1.team_id) as team_size
+from Employee e
