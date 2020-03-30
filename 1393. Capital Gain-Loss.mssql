@@ -1,0 +1,7 @@
+#1393. Capital Gain-Loss
+#Author: Ognjen Arsenijevic
+#username: ognjen1998
+SELECT stock_name, 
+SUM((CASE WHEN operation = 'Sell' THEN 1 ELSE -1 END) * price) AS capital_gain_loss
+FROM Stocks
+GROUP BY stock_name
