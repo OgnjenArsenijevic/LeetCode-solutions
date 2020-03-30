@@ -1,0 +1,5 @@
+#1378. Replace Employee ID With The Unique Identifier
+#Author: Ognjen Arsenijevic
+#username: ognjen1998
+select unique_id, name
+from Employees e left join EmployeeUNI eu on e.id=eu.id 
